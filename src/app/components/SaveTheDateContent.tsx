@@ -2,6 +2,11 @@
 
 import cn from "classnames";
 import { useEffect, useState } from "react";
+import Logo from "@wedding/app/components/Logo";
+
+const FIRST_STAGE_CLASSNAMES = "transition-opacity duration-4000";
+const SECOND_STAGE_CLASSNAMES = "transition-opacity delay-4000 duration-2000";
+const THIRD_STAGE_CLASSNAMES = "transition-opacity delay-6000 duration-2000";
 
 const SaveTheDateContent = () => {
   const [opacity, setOpacity] = useState(0);
@@ -12,14 +17,19 @@ const SaveTheDateContent = () => {
 
   return (
     <section className="flex flex-col w-full h-screen items-center justify-center gap-20 pt-8">
-      <div
-        className={cn(
-          "grid grid-cols-12 gap-4",
-          "transition-opacity duration-1000"
-        )}
+      <section
+        key="navbar"
+        className={cn("fixed top-0 w-full", SECOND_STAGE_CLASSNAMES)}
         style={{ opacity }}
       >
-        <div className="relative col-span-2">
+        <Logo className="m-6" />
+      </section>
+
+      <div className="grid grid-cols-12 gap-4">
+        <div
+          className={cn("relative col-span-2", SECOND_STAGE_CLASSNAMES)}
+          style={{ opacity }}
+        >
           <div
             className={cn(
               "absolute -rotate-90 font-sans text-lg font-light tracking-[.35rem]",
@@ -31,16 +41,25 @@ const SaveTheDateContent = () => {
         </div>
 
         <div className="col-span-10 flex flex-col justify-center text-7xl">
-          <h1 className="-mb-3">29</h1>
-          <h1>mar</h1>
-          <h1>25</h1>
+          <h1
+            className={cn("-mb-3", SECOND_STAGE_CLASSNAMES)}
+            style={{ opacity }}
+          >
+            29
+          </h1>
+          <h1 className={FIRST_STAGE_CLASSNAMES} style={{ opacity }}>
+            mar
+          </h1>
+          <h1 className={SECOND_STAGE_CLASSNAMES} style={{ opacity }}>
+            25
+          </h1>
         </div>
       </div>
 
       <div
         className={cn(
           "flex flex-col items-center justify-center font-sans gap-1",
-          "transition-opacity delay-1000 duration-1000"
+          THIRD_STAGE_CLASSNAMES
         )}
         style={{ opacity }}
       >

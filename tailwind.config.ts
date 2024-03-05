@@ -20,6 +20,15 @@ const config: Config = {
         header: ["var(--font-header)"],
         sans: ["var(--font-sans)"],
       },
+      transitionDelay: {
+        "2000": "2000ms",
+        "4000": "4000ms",
+        "6000": "6000ms",
+      },
+      transitionDuration: {
+        "2000": "2000ms",
+        "4000": "4000ms",
+      },
     },
   },
   plugins: [],
