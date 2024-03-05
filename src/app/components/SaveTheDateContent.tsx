@@ -24,9 +24,7 @@ const SaveTheDateContent = () => {
 
       <div className="flex flex-col items-center justify-center font-sans gap-1">
         <p className="text-2xl font-medium">Gabriela & Lucas</p>
-        <p className="text-xl font-light drop-shadow-solid">
-          Florianópolis - SC
-        </p>
+        <p className="text-xl font-light">Florianópolis - SC</p>
       </div>
     </section>
   );
