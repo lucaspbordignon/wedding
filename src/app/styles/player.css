@@ -29,8 +29,8 @@ mux-player {
   /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
   --center-controls: none;
   --bottom-play-button: none;
-}
 
-mux-player::part(video) {
-  object-fit: cover;
+  /* Player fit */
+  --media-object-fit: cover;
+  --media-object-position: center;
 }

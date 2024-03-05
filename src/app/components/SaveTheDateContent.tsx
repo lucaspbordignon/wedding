@@ -1,19 +1,27 @@
 "use client";
 
 import cn from "classnames";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import Logo from "@wedding/app/components/Logo";
 
-const FIRST_STAGE_CLASSNAMES = "transition-opacity duration-4000";
-const SECOND_STAGE_CLASSNAMES = "transition-opacity delay-4000 duration-2000";
-const THIRD_STAGE_CLASSNAMES = "transition-opacity delay-6000 duration-2000";
+const FIRST_STAGE_CLASSNAMES = "transition-opacity duration-1000";
+const SECOND_STAGE_CLASSNAMES = "transition-opacity delay-1000 duration-2000";
+const THIRD_STAGE_CLASSNAMES = "transition-opacity delay-3000 duration-2000";
 
-const SaveTheDateContent = () => {
+interface SaveTheDateContentProps {
+  animationStarted: boolean;
+}
+
+const SaveTheDateContent: FC<SaveTheDateContentProps> = ({
+  animationStarted = false,
+}) => {
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
+    if (!animationStarted) return;
+
     setOpacity(1);
-  }, []);
+  }, [animationStarted]);
 
   return (
     <section className="flex flex-col w-full h-screen items-center justify-center gap-20 pt-8">
