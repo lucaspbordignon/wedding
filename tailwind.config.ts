@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      dropShadow: {
+        solid: "1px 1px 2px black",
+      },
       fontFamily: {
         header: ["var(--font-header)"],
         sans: ["var(--font-sans)"],
