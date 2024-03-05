@@ -1,9 +1,24 @@
+"use client";
+
 import cn from "classnames";
+import { useEffect, useState } from "react";
 
 const SaveTheDateContent = () => {
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    setOpacity(1);
+  }, []);
+
   return (
-    <section className="flex flex-col w-full h-screen items-center justify-center gap-20 mt-8">
-      <div className="grid grid-cols-12 gap-4">
+    <section className="flex flex-col w-full h-screen items-center justify-center gap-20 pt-8">
+      <div
+        className={cn(
+          "grid grid-cols-12 gap-4",
+          "transition-opacity duration-1000"
+        )}
+        style={{ opacity }}
+      >
         <div className="relative col-span-2">
           <div
             className={cn(
@@ -22,7 +37,13 @@ const SaveTheDateContent = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center font-sans gap-1">
+      <div
+        className={cn(
+          "flex flex-col items-center justify-center font-sans gap-1",
+          "transition-opacity delay-1000 duration-1000"
+        )}
+        style={{ opacity }}
+      >
         <p className="text-2xl font-medium">Gabriela & Lucas</p>
         <p className="text-xl font-light">Florianópolis - SC</p>
       </div>
