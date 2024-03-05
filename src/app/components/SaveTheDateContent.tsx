@@ -8,7 +8,7 @@ const SaveTheDateContent = () => {
           <div
             className={cn(
               "absolute w-full -rotate-90 font-sans text-lg font-light tracking-[.35rem]",
-              "top-20 -left-24 w-52"
+              "top-14 -left-32 w-64"
             )}
           >
             SAVE THE DATE
