@@ -28,7 +28,7 @@ const RootLayout = ({
     <html lang="en">
       <body
         className={cn(
-          "text-white bg-black",
+          "text-white",
           bastiaFont.variable,
           outfitFont.variable
         )}
