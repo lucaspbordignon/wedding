@@ -19,16 +19,20 @@ export const metadata: Metadata = {
   description: "Casamento - Gabriela e Lucas",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
-      <body className={cn(bastiaFont.variable, outfitFont.variable)}>
+      <body
+        className={cn("text-white", bastiaFont.variable, outfitFont.variable)}
+      >
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
