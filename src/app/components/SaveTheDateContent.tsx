@@ -1,12 +1,21 @@
+import cn from "classnames";
+
 const SaveTheDateContent = () => {
   return (
-    <section className="flex flex-col w-full h-screen items-center justify-center gap-20">
-      <div className="flex gap-4">
-        <div className="-rotate-90 font-sans text-lg font-light h-min m-auto tracking-[.35rem]">
-          SAVE THE DATE
+    <section className="flex flex-col w-full h-screen items-center justify-center gap-20 mt-8">
+      <div className="grid grid-cols-12 gap-4">
+        <div className="relative col-span-2">
+          <div
+            className={cn(
+              "absolute w-full -rotate-90 font-sans text-lg font-light tracking-[.35rem]",
+              "top-20 -left-24 w-52"
+            )}
+          >
+            SAVE THE DATE
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center text-7xl">
+        <div className="col-span-10 flex flex-col justify-center text-7xl">
           <h1 className="-mb-3">29</h1>
           <h1>mar</h1>
           <h1>25</h1>
