@@ -16,7 +16,7 @@ const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
   }, 1000);
 
   useEffect(() => {
-    setOpacity(0.6);
+    setOpacity(0.7);
   }, []);
 
   return (
