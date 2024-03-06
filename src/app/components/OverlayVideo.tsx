@@ -18,7 +18,7 @@ const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
       className="w-screen h-screen absolute -z-10 object-cover opacity-70"
       playbackId="URUZfqcvQ2vN900m9JpPo9iSLZZZc3gGpf5Wvenlqq98"
       poster="https://image.mux.com/URUZfqcvQ2vN900m9JpPo9iSLZZZc3gGpf5Wvenlqq98/thumbnail.webp?time=0"
-      minResolution={MinResolution.noLessThan720p}
+      minResolution={MinResolution.noLessThan1080p}
       loop
       muted
       autoPlay
