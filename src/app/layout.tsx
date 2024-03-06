@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Save the date",
   description: "Casamento - Gabriela e Lucas",
   openGraph: {
-    images: ["/preview.png"],
+    images: ["/preview.jpg"],
   },
 };
 
