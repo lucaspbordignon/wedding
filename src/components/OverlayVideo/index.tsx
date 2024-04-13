@@ -4,7 +4,7 @@ import MuxPlayer, { MinResolution } from "@mux/mux-player-react";
 import { FC, useEffect, useState } from "react";
 
 interface OverlayVideoProps {
-  onPlaying: () => void;
+  onPlaying?: () => void;
 }
 
 const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
@@ -12,7 +12,7 @@ const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
 
   setTimeout(() => {
     /* Guarantees the callback is executed on low-battery mode */
-    onPlaying();
+    onPlaying?.();
   }, 1000);
 
   useEffect(() => {
