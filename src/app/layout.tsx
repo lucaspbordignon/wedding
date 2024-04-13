@@ -4,10 +4,10 @@ import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import cn from "classnames";
 
-import "./globals.css";
+import "../globals.css";
 
 const bastiaFont = localFont({
-  src: "./styles/Bastia-Bold.otf",
+  src: "../styles/Bastia-Bold.otf",
   variable: "--font-header",
 });
 const outfitFont = Outfit({

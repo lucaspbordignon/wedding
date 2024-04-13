@@ -1,7 +1,7 @@
 "use client";
 
-import OverlayVideo from "@wedding/app/components/OverlayVideo";
-import SaveTheDateContent from "@wedding/app/components/SaveTheDateContent";
+import OverlayVideo from "@wedding/components/OverlayVideo";
+import SaveTheDateContent from "@wedding/components/SaveTheDateContent";
 import { useState } from "react";
 
 const Home = () => {

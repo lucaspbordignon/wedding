@@ -2,7 +2,7 @@
 
 import cn from "classnames";
 import { FC, useEffect, useState } from "react";
-import Logo from "@wedding/app/components/Logo";
+import Logo from "@wedding/components/Logo";
 
 const FIRST_STAGE_CLASSNAMES = "transition-opacity duration-1000";
 const SECOND_STAGE_CLASSNAMES = "transition-opacity delay-1000 duration-2000";
