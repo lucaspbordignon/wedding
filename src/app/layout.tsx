@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
-import cn from "classnames";
+import clsx from "clsx";
 
 import "../globals.css";
 
@@ -31,7 +31,7 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body
-        className={cn(
+        className={clsx(
           "text-white bg-black overflow-y-hidden",
           bastiaFont.variable,
           outfitFont.variable

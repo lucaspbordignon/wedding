@@ -1,6 +1,6 @@
 "use client";
 
-import cn from "classnames";
+import clsx from "clsx";
 import { FC, useEffect, useState } from "react";
 import Logo from "@wedding/components/Logo";
 
@@ -27,7 +27,7 @@ const SaveTheDateContent: FC<SaveTheDateContentProps> = ({
     <section className="flex flex-col w-full h-screen items-center justify-center gap-20 pt-8">
       <section
         key="navbar"
-        className={cn("fixed top-0 w-full", SECOND_STAGE_CLASSNAMES)}
+        className={clsx("fixed top-0 w-full", SECOND_STAGE_CLASSNAMES)}
         style={{ opacity }}
       >
         <Logo className="m-6" />
@@ -35,11 +35,11 @@ const SaveTheDateContent: FC<SaveTheDateContentProps> = ({
 
       <div className="grid grid-cols-12 gap-4">
         <div
-          className={cn("relative col-span-2", SECOND_STAGE_CLASSNAMES)}
+          className={clsx("relative col-span-2", SECOND_STAGE_CLASSNAMES)}
           style={{ opacity }}
         >
           <div
-            className={cn(
+            className={clsx(
               "absolute -rotate-90 font-sans text-lg font-light tracking-[.35rem]",
               "top-14 -left-32 w-64"
             )}
@@ -50,7 +50,7 @@ const SaveTheDateContent: FC<SaveTheDateContentProps> = ({
 
         <div className="col-span-10 flex flex-col justify-center text-7xl">
           <h1
-            className={cn("-mb-3", SECOND_STAGE_CLASSNAMES)}
+            className={clsx("-mb-3", SECOND_STAGE_CLASSNAMES)}
             style={{ opacity }}
           >
             29
@@ -65,7 +65,7 @@ const SaveTheDateContent: FC<SaveTheDateContentProps> = ({
       </div>
 
       <div
-        className={cn(
+        className={clsx(
           "flex flex-col items-center justify-center font-sans gap-1",
           THIRD_STAGE_CLASSNAMES
         )}

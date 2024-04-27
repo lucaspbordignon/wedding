@@ -1,6 +1,8 @@
 "use client";
 
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+import BannerEventDate from "@wedding/components/BannerEventDate";
+import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import Sidebar from "@wedding/components/Sidebar";
 import { useEffect, useRef, useState } from "react";
@@ -52,18 +54,54 @@ const Home = () => {
     <main className="font-header">
       <OverlayVideo />
 
-      <Parallax ref={parallaxReference} pages={3} config={{ tension: 400 }}>
+      <Parallax ref={parallaxReference} pages={6}>
         {/* Page 1 */}
-        <ParallaxLayer offset={0} speed={-1} sticky={{ start: 0, end: 1 }}>
+        <ParallaxLayer speed={1} sticky={{ start: 0, end: 1 }}>
           <Sidebar scrollYProgress={scrollYProgress} />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0.2} speed={1}>
-          {/* TODO - Introduce the header  */}
+        <ParallaxLayer speed={1} sticky={{ start: 0.02, end: 6 }}>
+          <Header />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0.5} speed={2}>
-          {/* TODO - Introduce the header  */}
+        <ParallaxLayer
+          speed={1}
+          sticky={{ start: 0, end: 1 }}
+          className="flex items-center justify-center"
+        >
+          <BannerEventDate />
+        </ParallaxLayer>
+
+        {/* Page 2 */}
+        <ParallaxLayer
+          speed={1}
+          sticky={{ start: 0.7, end: 2 }}
+          style={{ opacity: scrollYProgress / 100 }}
+          className="font-sans font-light"
+        >
+          <p>16 h</p>
+          <p>Praia Brava</p>
+          <p>Florianópolis - SC</p>
+        </ParallaxLayer>
+
+        {/* Page 3 */}
+        <ParallaxLayer offset={2.4} speed={1}>
+          <div>PICTURE</div>
+        </ParallaxLayer>
+
+        {/* Page 4 */}
+        <ParallaxLayer offset={3.4} speed={1}>
+          <div>QUOTE</div>
+        </ParallaxLayer>
+
+        {/* Page 5 */}
+        <ParallaxLayer offset={4.4} speed={1}>
+          <div>SCHEDULE</div>
+        </ParallaxLayer>
+
+        {/* Page 6 */}
+        <ParallaxLayer offset={5.4} speed={1}>
+          <div>LOCATION</div>
         </ParallaxLayer>
       </Parallax>
     </main>
