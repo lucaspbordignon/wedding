@@ -1,11 +1,10 @@
 import { animated } from "@react-spring/web";
+import usePageState from "@wedding/state/page";
 import { FC } from "react";
 
-interface SidebarProps {
-  scrollYProgress: number;
-}
+const Sidebar: FC = () => {
+  const scrollYProgress = usePageState((state) => state.scrollYProgress);
 
-const Sidebar: FC<SidebarProps> = ({ scrollYProgress = 0 }) => {
   const windowHeight = window.innerHeight;
 
   const width = Math.max(

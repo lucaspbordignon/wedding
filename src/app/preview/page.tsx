@@ -6,7 +6,8 @@ import BannerEventLocation from "@wedding/components/BannerEventLocation";
 import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import Sidebar from "@wedding/components/Sidebar";
-import { useEffect, useRef, useState } from "react";
+import usePageState from "@wedding/state/page";
+import { useEffect, useRef } from "react";
 
 /**
  * The homepage contains a parallax effect for all the visible elements on the screen,
@@ -32,7 +33,8 @@ import { useEffect, useRef, useState } from "react";
  * TODO
  */
 const Home = () => {
-  const [scrollYProgress, setScrollYProgress] = useState(0);
+  const scrollYProgress = usePageState((state) => state.scrollYProgress);
+  const setScrollYProgress = usePageState((state) => state.setScrollYProgress);
 
   const parallaxReference = useRef<IParallax>(null);
 
@@ -55,10 +57,10 @@ const Home = () => {
     <main className="font-header">
       <OverlayVideo />
 
-      <Parallax ref={parallaxReference} pages={6}>
+      <Parallax ref={parallaxReference} pages={5}>
         {/* Page 1 */}
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 1 }}>
-          <Sidebar scrollYProgress={scrollYProgress} />
+          <Sidebar />
         </ParallaxLayer>
 
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 6 }}>
@@ -96,11 +98,6 @@ const Home = () => {
         {/* Page 5 */}
         <ParallaxLayer offset={4.4} speed={1}>
           <div>SCHEDULE</div>
-        </ParallaxLayer>
-
-        {/* Page 6 */}
-        <ParallaxLayer offset={5.4} speed={1}>
-          <div>LOCATION</div>
         </ParallaxLayer>
       </Parallax>
     </main>
