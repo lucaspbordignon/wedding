@@ -2,6 +2,7 @@
 
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import BannerEventDate from "@wedding/components/BannerEventDate";
+import BannerEventLocation from "@wedding/components/BannerEventLocation";
 import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import Sidebar from "@wedding/components/Sidebar";
@@ -60,7 +61,7 @@ const Home = () => {
           <Sidebar scrollYProgress={scrollYProgress} />
         </ParallaxLayer>
 
-        <ParallaxLayer speed={1} sticky={{ start: 0.02, end: 6 }}>
+        <ParallaxLayer speed={1} sticky={{ start: 0, end: 6 }}>
           <Header />
         </ParallaxLayer>
 
@@ -75,13 +76,11 @@ const Home = () => {
         {/* Page 2 */}
         <ParallaxLayer
           speed={1}
-          sticky={{ start: 0.7, end: 2 }}
-          style={{ opacity: scrollYProgress / 100 }}
-          className="font-sans font-light"
+          sticky={{ start: 0, end: 1 }}
+          style={{ opacity: scrollYProgress / 500 }}
+          className="flex items-end pb-28"
         >
-          <p>16 h</p>
-          <p>Praia Brava</p>
-          <p>Florianópolis - SC</p>
+          <BannerEventLocation />
         </ParallaxLayer>
 
         {/* Page 3 */}
