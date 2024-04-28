@@ -6,6 +6,7 @@ import BannerEventLocation from "@wedding/components/BannerEventLocation";
 import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import Sidebar from "@wedding/components/Sidebar";
+import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
 
@@ -86,18 +87,18 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 3 */}
-        <ParallaxLayer offset={2.4} speed={1}>
+        <ParallaxLayer offset={2} speed={1}>
           <div>PICTURE</div>
         </ParallaxLayer>
 
         {/* Page 4 */}
-        <ParallaxLayer offset={3.4} speed={1}>
+        <ParallaxLayer offset={3} speed={1}>
           <div>QUOTE</div>
         </ParallaxLayer>
 
         {/* Page 5 */}
-        <ParallaxLayer offset={4.4} speed={1}>
-          <div>SCHEDULE</div>
+        <ParallaxLayer offset={4} speed={1}>
+          <TemplateSchedule />
         </ParallaxLayer>
       </Parallax>
     </main>
