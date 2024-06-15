@@ -6,7 +6,7 @@ const Header = () => {
     <header className="flex justify-between font-header p-5">
       <p>gabriela e lucas</p>
 
-      <Menu />
+      <Menu className="cursor-pointer" />
     </header>
   );
 };
