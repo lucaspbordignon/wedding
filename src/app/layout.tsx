@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
+import Sidebar from "@wedding/components/Sidebar";
 
 import "../globals.css";
 
@@ -40,6 +41,7 @@ const RootLayout = ({
         {children}
 
         <Analytics />
+        <Sidebar />
       </body>
     </html>
   );

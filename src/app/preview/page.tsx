@@ -5,7 +5,7 @@ import BannerEventDate from "@wedding/components/BannerEventDate";
 import BannerEventLocation from "@wedding/components/BannerEventLocation";
 import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
-import Sidebar from "@wedding/components/Sidebar";
+import OverlaySolid from "@wedding/components/OverlaySolid";
 import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
@@ -61,7 +61,7 @@ const Home = () => {
       <Parallax ref={parallaxReference} pages={5}>
         {/* Page 1 */}
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 1 }}>
-          <Sidebar />
+          <OverlaySolid />
         </ParallaxLayer>
 
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 6 }}>
