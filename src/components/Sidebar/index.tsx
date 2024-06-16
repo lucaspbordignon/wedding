@@ -18,7 +18,7 @@ const Sidebar: FC = () => {
     <aside
       className={clsx(
         "absolute inset-0 bg-white text-primary",
-        "transition-all duration-300 ease-in-out h-screen w-screen",
+        "transition-all duration-300 ease-in-out h-dvh w-screen",
         "flex flex-col items-center justify-start gap-y-20",
         {
           "opacity-0 -z-10": !isMenuOpen,
