@@ -6,6 +6,7 @@ import BannerEventLocation from "@wedding/components/BannerEventLocation";
 import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import OverlaySolid from "@wedding/components/OverlaySolid";
+import TemplateQuote from "@wedding/components/TemplateQuote";
 import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
@@ -55,7 +56,7 @@ const Home = () => {
   }, [parallaxReference.current]);
 
   return (
-    <main className="font-header">
+    <main className="font-header text-base lg:text-lg">
       <OverlayVideo />
 
       <Parallax ref={parallaxReference} pages={5}>
@@ -87,17 +88,21 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 3 */}
-        <ParallaxLayer offset={2} speed={1}>
-          <div>PICTURE</div>
+        <ParallaxLayer offset={2} speed={1} sticky={{ start: 2, end: 3 }}>
+          <img
+            src="/assets/cover.png"
+            loading="eager"
+            className="object-cover w-full h-full"
+          />
         </ParallaxLayer>
 
         {/* Page 4 */}
-        <ParallaxLayer offset={3} speed={1}>
-          <div>QUOTE</div>
+        <ParallaxLayer offset={3} speed={1} sticky={{ start: 3, end: 4 }}>
+          <TemplateQuote />
         </ParallaxLayer>
 
         {/* Page 5 */}
-        <ParallaxLayer offset={4} speed={1}>
+        <ParallaxLayer offset={4} speed={1} sticky={{ start: 4, end: 5 }}>
           <TemplateSchedule />
         </ParallaxLayer>
       </Parallax>
