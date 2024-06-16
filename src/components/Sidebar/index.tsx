@@ -2,6 +2,7 @@
 
 import usePageState from "@wedding/state/page";
 import clsx from "clsx";
+import Link from "next/link";
 import { FC } from "react";
 import { X } from "react-feather";
 
@@ -18,35 +19,38 @@ const Sidebar: FC = () => {
       className={clsx(
         "absolute inset-0 bg-white text-primary",
         "transition-all duration-300 ease-in-out h-screen w-screen",
-        "flex flex-col items-center justify-center",
+        "flex flex-col items-center justify-start gap-y-20",
         {
           "opacity-0 -z-10": !isMenuOpen,
           "opacity-100 z-50": isMenuOpen,
         }
       )}
     >
-      <header className="flex justify-between size-full font-header p-5">
+      <header className="flex justify-between w-full h-fit font-header p-5">
         <p>gabriela e lucas</p>
 
         <X onClick={onClose} className="cursor-pointer" />
       </header>
 
-      <nav className="flex flex-col gap-y-6 pb-20 font-sans font-extralight text-lg">
-        <a href="#">INÍCIO</a>
+      <nav
+        className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg"
+        onClick={onClose}
+      >
+        <Link href="/preview">INÍCIO</Link>
 
-        <a href="#">PROGRAMAÇÃO</a>
+        <Link href="/preview#schedule">PROGRAMAÇÃO</Link>
 
-        <a href="#">LOCAL</a>
+        <Link href="/location">LOCAL</Link>
 
-        <a href="#">PRESENÇA</a>
+        <Link href="/rsvp">PRESENÇA</Link>
 
-        <a href="#">ESTADIA</a>
+        <Link href="/hotels">ESTADIA</Link>
 
-        <a href="#">PRESENTES</a>
+        <Link href="/gifts">PRESENTES</Link>
 
-        <a href="#">GALERIA</a>
+        <Link href="/galeria">GALERIA</Link>
 
-        <a href="#">PADRINHOS</a>
+        <Link href="/maids-of-honor">PADRINHOS</Link>
       </nav>
     </aside>
   );

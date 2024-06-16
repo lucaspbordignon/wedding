@@ -4,6 +4,7 @@ import Button from "@wedding/components/Button";
 const TemplateSchedule = () => {
   return (
     <section
+      id="schedule"
       className={clsx(
         "min-h-screen size-full bg-white p-6 pt-32 gap-y-8",
         "flex flex-col items-center",
