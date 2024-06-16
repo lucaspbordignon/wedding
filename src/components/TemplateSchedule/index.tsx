@@ -6,7 +6,7 @@ const TemplateSchedule = () => {
     <section
       id="schedule"
       className={clsx(
-        "min-h-screen size-full bg-white p-6 pt-32 gap-y-8",
+        "min-h-dvh size-full bg-white p-6 pt-32 gap-y-8",
         "flex flex-col items-center",
         "font-sans font-extralight text-black relative"
       )}

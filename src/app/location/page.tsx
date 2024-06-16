@@ -5,7 +5,7 @@ import Header from "@wedding/components/Header";
 const Page = () => (
   <main
     className={clsx(
-      "min-h-screen w-full flex flex-col bg-white p-6 pt-32 gap-y-8",
+      "min-h-dvh w-full flex flex-col bg-white p-6 pt-32 gap-y-8",
       "font-sans font-extralight text-black relative"
     )}
   >

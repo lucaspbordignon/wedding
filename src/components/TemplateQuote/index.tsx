@@ -4,7 +4,7 @@ const TemplateQuote = () => {
   return (
     <section
       className={clsx(
-        "min-h-screen w-full flex flex-col bg-primary p-6 justify-center items-center",
+        "min-h-dvh w-full flex flex-col bg-primary p-6 justify-center items-center",
         "font-sans font-extralight text-white"
       )}
     >

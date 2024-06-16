@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   openGraph: {
     images: ["/preview.jpg"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 const RootLayout = ({

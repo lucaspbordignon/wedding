@@ -92,7 +92,7 @@ const Home = () => {
           <img
             src="/assets/cover.png"
             loading="eager"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full max-h-dvh"
           />
         </ParallaxLayer>
 
