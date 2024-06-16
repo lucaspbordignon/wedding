@@ -10,6 +10,7 @@ import TemplateQuote from "@wedding/components/TemplateQuote";
 import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
+import ScrollIndicator from "@wedding/components/ScrollIndicator";
 
 /**
  * The homepage contains a parallax effect for all the visible elements on the screen,
@@ -88,7 +89,7 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 3 */}
-        <ParallaxLayer offset={2} speed={1} sticky={{ start: 2, end: 3 }}>
+        <ParallaxLayer speed={1} sticky={{ start: 2, end: 3 }}>
           <img
             src="/assets/cover.png"
             loading="eager"
@@ -97,13 +98,18 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 4 */}
-        <ParallaxLayer offset={3} speed={1} sticky={{ start: 3, end: 4 }}>
+        <ParallaxLayer speed={1} sticky={{ start: 3, end: 4 }}>
           <TemplateQuote />
         </ParallaxLayer>
 
         {/* Page 5 */}
-        <ParallaxLayer offset={4} speed={1} sticky={{ start: 4, end: 5 }}>
+        <ParallaxLayer speed={1} sticky={{ start: 4, end: 5 }}>
           <TemplateSchedule />
+        </ParallaxLayer>
+
+        {/* Floating Elements */}
+        <ParallaxLayer sticky={{ start: 0, end: 3 }}>
+          <ScrollIndicator />
         </ParallaxLayer>
       </Parallax>
     </main>
