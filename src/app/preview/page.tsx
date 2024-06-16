@@ -12,29 +12,6 @@ import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
 import ScrollIndicator from "@wedding/components/ScrollIndicator";
 
-/**
- * The homepage contains a parallax effect for all the visible elements on the screen,
- * which follow the pages pattern below:
- *
- * Page 1
- *
- * @element - Logo, with a sticky behavior
- * @element - Menu, with a sticky behavior
- * @element - Sidebar, at half-width
- * @element - Date, centralized
- *
- * Page 2
- *
- * @element - Logo, with a sticky behavior
- * @element - Menu, with a sticky behavior
- * @element - Sidebar, at full-width
- * @element - Date, right-aligned
- * @element - Location, bottom-aligned
- *
- * Page 3
- *
- * TODO
- */
 const Home = () => {
   const scrollYProgress = usePageState((state) => state.scrollYProgress);
   const setScrollYProgress = usePageState((state) => state.setScrollYProgress);
@@ -60,14 +37,10 @@ const Home = () => {
     <main className="font-header text-base lg:text-lg">
       <OverlayVideo />
 
-      <Parallax ref={parallaxReference} pages={5}>
+      <Parallax ref={parallaxReference} pages={5} className="no-scrollbar">
         {/* Page 1 */}
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 1 }}>
           <OverlaySolid />
-        </ParallaxLayer>
-
-        <ParallaxLayer speed={1} sticky={{ start: 0, end: 6 }}>
-          <Header />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -89,7 +62,7 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 3 */}
-        <ParallaxLayer speed={1} sticky={{ start: 2, end: 3 }}>
+        <ParallaxLayer offset={2} speed={0}>
           <img
             src="/assets/cover.png"
             loading="eager"
@@ -98,16 +71,20 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 4 */}
-        <ParallaxLayer speed={1} sticky={{ start: 3, end: 4 }}>
+        <ParallaxLayer offset={3} speed={0}>
           <TemplateQuote />
         </ParallaxLayer>
 
         {/* Page 5 */}
-        <ParallaxLayer speed={1} sticky={{ start: 4, end: 5 }}>
+        <ParallaxLayer speed={0} sticky={{ start: 4, end: 5 }}>
           <TemplateSchedule />
         </ParallaxLayer>
 
         {/* Floating Elements */}
+        <ParallaxLayer speed={0} sticky={{ start: 0, end: 3 }}>
+          <Header />
+        </ParallaxLayer>
+
         <ParallaxLayer sticky={{ start: 0, end: 3 }}>
           <ScrollIndicator />
         </ParallaxLayer>

@@ -40,7 +40,7 @@ const RootLayout = ({
     <html lang="en">
       <body
         className={clsx(
-          "text-white bg-black overflow-y-hidden",
+          "text-white bg-black overflow-y-hidden no-scrollbar",
           bastiaFont.variable,
           outfitFont.variable
         )}

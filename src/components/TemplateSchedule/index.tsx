@@ -1,17 +1,13 @@
-import clsx from "clsx";
 import Button from "@wedding/components/Button";
+import ContainerBase from "@wedding/components/ContainerBase";
 
 const TemplateSchedule = () => {
   return (
-    <section
-      id="schedule"
-      className={clsx(
-        "min-h-dvh size-full bg-white p-6 pt-32 gap-y-8",
-        "flex flex-col items-center",
-        "font-sans font-extralight text-black relative"
-      )}
-    >
-      <section className="flex flex-col justify-between h-full gap-y-9 max-w-screen-sm">
+    <ContainerBase>
+      <section
+        id="schedule"
+        className="flex flex-col justify-between h-full gap-y-9"
+      >
         <section className="flex flex-col gap-y-10">
           <h1 className="text-4xl font-header font-bold text-primary">
             Programação
@@ -55,7 +51,7 @@ const TemplateSchedule = () => {
           </a>
         </section>
       </section>
-    </section>
+    </ContainerBase>
   );
 };
 

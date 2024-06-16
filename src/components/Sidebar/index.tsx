@@ -20,6 +20,7 @@ const Sidebar: FC = () => {
         "absolute inset-0 bg-white text-primary",
         "transition-all duration-300 ease-in-out h-dvh w-screen",
         "flex flex-col items-center justify-start gap-y-20",
+        "text-base lg:text-lg",
         {
           "opacity-0 -z-10": !isMenuOpen,
           "opacity-100 z-50": isMenuOpen,
