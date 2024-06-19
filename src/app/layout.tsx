@@ -52,8 +52,6 @@ const RootLayout = ({
         {children}
 
         <Analytics />
-
-        <Header />
       </body>
     </html>
   );

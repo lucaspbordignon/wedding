@@ -10,6 +10,7 @@ import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
 import { useEffect, useRef } from "react";
 import ScrollIndicator from "@wedding/components/ScrollIndicator";
+import Header from "@wedding/components/Header";
 
 const Home = () => {
   const scrollYProgress = usePageState((state) => state.scrollYProgress);
@@ -33,8 +34,10 @@ const Home = () => {
   }, [parallaxReference.current]);
 
   return (
-    <main className="font-header text-base lg:text-lg">
+    <main className="dark font-header text-base lg:text-lg">
       <OverlayVideo />
+
+      <Header />
 
       <Parallax ref={parallaxReference} pages={5} className="no-scrollbar">
         {/* Page 1 */}

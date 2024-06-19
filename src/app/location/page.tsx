@@ -1,8 +1,11 @@
 import Button from "@wedding/components/Button";
 import ContainerBase from "@wedding/components/ContainerBase";
+import Header from "@wedding/components/Header";
 
 const Page = () => (
   <ContainerBase className="justify-between">
+    <Header />
+
     <section className="w-full flex flex-col gap-y-8">
       <h1 className="text-4xl font-header font-bold text-primary">
         Le Barbaron
