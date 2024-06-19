@@ -1,6 +1,12 @@
 import { animated } from "@react-spring/web";
 import usePageState from "@wedding/state/page";
 
+const HORIZONTAL_MARGIN = 20;
+const BIAS_FACTOR_TRANSLATE = -32;
+
+const THREE_DIGIT_WIDTH = 72;
+const TWO_DIGIT_WIDTH = 10;
+
 const BannerEventDate = () => {
   const scrollYProgress = usePageState((state) => state.scrollYProgress);
 
@@ -9,31 +15,29 @@ const BannerEventDate = () => {
 
   const scrollYProgressPercentage = scrollYProgress / windowHeight;
 
-  const biasFactorTranslate = -32;
-  const biasFactorLetterSpacing = Math.min(
-    windowWidth * 0.05,
-    (scrollYProgressPercentage + 0.1) * windowWidth * 0.05
+  const translateXTwoDigit = Math.min(
+    windowWidth / 2 - HORIZONTAL_MARGIN - TWO_DIGIT_WIDTH,
+    scrollYProgressPercentage * (windowWidth / 2) - BIAS_FACTOR_TRANSLATE
   );
 
-  const translateX = Math.min(
-    (windowWidth / 2) * 0.75,
-    scrollYProgressPercentage * (windowWidth / 2) - biasFactorTranslate
+  const translateXThreeDigit = Math.min(
+    windowWidth / 2 - HORIZONTAL_MARGIN - THREE_DIGIT_WIDTH,
+    scrollYProgressPercentage * (windowWidth / 2) - BIAS_FACTOR_TRANSLATE
   );
 
   return (
     <section className="flex justify-center text-7xl">
       <div>
+        <animated.h1 style={{ translateX: translateXTwoDigit }}>29</animated.h1>
+
         <animated.h1
-          style={{ translateX: translateX + biasFactorLetterSpacing }}
+          style={{ translateX: translateXThreeDigit }}
+          className="mb-3"
         >
-          29
+          mar
         </animated.h1>
-        <animated.h1 style={{ translateX: translateX }}>mar</animated.h1>
-        <animated.h1
-          style={{ translateX: translateX + biasFactorLetterSpacing }}
-        >
-          25
-        </animated.h1>
+
+        <animated.h1 style={{ translateX: translateXTwoDigit }}>25</animated.h1>
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ const Header: FC = () => {
       <header
         className={clsx(
           "absolute top-0 left-0 w-full z-50 flex justify-between font-header p-5",
-          "dark:text-primary text-white",
+          "dark:text-white text-primary",
           {
             hidden: isMenuOpen,
           }
