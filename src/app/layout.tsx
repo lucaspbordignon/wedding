@@ -3,7 +3,8 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
-import Sidebar from "@wedding/components/Sidebar";
+
+import Header from "@wedding/components/Header";
 
 import "../globals.css";
 
@@ -25,7 +26,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#FFFFFF" },
+  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -40,7 +44,7 @@ const RootLayout = ({
     <html lang="en">
       <body
         className={clsx(
-          "text-white bg-black overflow-y-hidden no-scrollbar",
+          "text-white bg-black no-scrollbar",
           bastiaFont.variable,
           outfitFont.variable
         )}
@@ -48,7 +52,8 @@ const RootLayout = ({
         {children}
 
         <Analytics />
-        <Sidebar />
+
+        <Header />
       </body>
     </html>
   );

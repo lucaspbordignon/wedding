@@ -21,7 +21,7 @@ const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
 
   return (
     <MuxPlayer
-      className="w-screen h-screen absolute -z-10 object-cover transition-opacity duration-4000"
+      className="w-screen h-dvh absolute -z-10 object-cover transition-opacity duration-4000"
       playbackId="URUZfqcvQ2vN900m9JpPo9iSLZZZc3gGpf5Wvenlqq98"
       poster="https://image.mux.com/URUZfqcvQ2vN900m9JpPo9iSLZZZc3gGpf5Wvenlqq98/thumbnail.webp?time=0"
       minResolution={MinResolution.noLessThan1080p}

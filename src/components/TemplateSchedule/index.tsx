@@ -6,9 +6,9 @@ const TemplateSchedule = () => {
     <ContainerBase>
       <section
         id="schedule"
-        className="flex flex-col justify-between h-full gap-y-9"
+        className="flex flex-col justify-between h-full gap-y-6"
       >
-        <section className="flex flex-col gap-y-10">
+        <section className="flex flex-col gap-y-8">
           <h1 className="text-4xl font-header font-bold text-primary">
             Programação
           </h1>
@@ -40,7 +40,7 @@ const TemplateSchedule = () => {
           </section>
         </section>
 
-        <section className="px-6 w-full flex flex-col gap-y-4">
+        <section className="w-full flex flex-col gap-y-4">
           <Button href="/rsvp">Confirmar presença</Button>
 
           <a

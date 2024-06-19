@@ -3,7 +3,6 @@
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import BannerEventDate from "@wedding/components/BannerEventDate";
 import BannerEventLocation from "@wedding/components/BannerEventLocation";
-import Header from "@wedding/components/Header";
 import OverlayVideo from "@wedding/components/OverlayVideo";
 import OverlaySolid from "@wedding/components/OverlaySolid";
 import TemplateQuote from "@wedding/components/TemplateQuote";
@@ -81,10 +80,6 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Floating Elements */}
-        <ParallaxLayer speed={0} sticky={{ start: 0, end: 3 }}>
-          <Header />
-        </ParallaxLayer>
-
         <ParallaxLayer sticky={{ start: 0, end: 3 }}>
           <ScrollIndicator />
         </ParallaxLayer>

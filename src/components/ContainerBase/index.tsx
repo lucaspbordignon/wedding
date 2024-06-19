@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import Header from "@wedding/components/Header";
 
 interface ContainerBaseProps extends PropsWithChildren {
   className?: string;
@@ -15,15 +14,11 @@ const ContainerBase: FC<ContainerBaseProps> = ({ className, children }) => {
         "text-base lg:text-lg"
       )}
     >
-      <section className="sticky w-full h-fit">
-        <Header dark />
-      </section>
-
       <section
-        style={{ height: "calc(100dvh - 4rem)" }}
         className={clsx(
-          "size-full p-6 pt-16 max-w-screen-sm mx-auto",
-          "flex flex-col items-center",
+          "w-full h-dvh p-6 max-w-screen-sm mx-auto",
+          "flex flex-1 flex-col items-center",
+          "pt-24 lg:pt-32",
           className
         )}
       >
