@@ -12,6 +12,11 @@ import { useEffect, useRef } from "react";
 import ScrollIndicator from "@wedding/components/ScrollIndicator";
 import Header from "@wedding/components/Header";
 
+const ANCHORS = {
+  home: 0,
+  schedule: 4,
+} as Record<string, number>;
+
 const Home = () => {
   const scrollYProgress = usePageState((state) => state.scrollYProgress);
   const setScrollYProgress = usePageState((state) => state.setScrollYProgress);
@@ -23,15 +28,35 @@ const Home = () => {
       setScrollYProgress(parallaxReference.current.current);
   };
 
-  useEffect(() => {
+  const synchronizeAnchorScroll = () => {
+    const currentHash = window.location.hash;
+
+    const hash = currentHash.replace("#", "");
+
+    if (!Object.keys(ANCHORS).includes(hash)) return;
+
+    const anchor = ANCHORS[hash];
+
+    parallaxReference.current?.scrollTo?.(anchor);
+  };
+
+  const onParallaxContainerInitialized = () => {
     if (!parallaxReference?.current?.container?.current) return;
 
     const element = parallaxReference.current.container.current as HTMLElement;
 
     element.addEventListener("scroll", onScroll);
+    element.addEventListener("hashchange", synchronizeAnchorScroll);
 
-    return () => element.removeEventListener("scroll", onScroll);
-  }, [parallaxReference.current]);
+    synchronizeAnchorScroll();
+
+    return () => {
+      element.removeEventListener("scroll", onScroll);
+      element.removeEventListener("hashchange", synchronizeAnchorScroll);
+    };
+  };
+
+  useEffect(onParallaxContainerInitialized, [parallaxReference.current]);
 
   return (
     <main className="dark font-header text-base lg:text-lg">

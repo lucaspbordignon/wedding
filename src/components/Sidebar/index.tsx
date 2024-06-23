@@ -37,7 +37,7 @@ const Sidebar: FC = () => {
         className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg"
         onClick={onClose}
       >
-        <Link href="/preview">INÍCIO</Link>
+        <Link href="/preview#home">INÍCIO</Link>
 
         <Link href="/preview#schedule">PROGRAMAÇÃO</Link>
 
