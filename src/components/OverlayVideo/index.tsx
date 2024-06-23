@@ -5,9 +5,11 @@ import { FC, useEffect, useState } from "react";
 
 interface OverlayVideoProps {
   onPlaying?: () => void;
+
+  opaque?: boolean;
 }
 
-const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
+const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying, opaque = false }) => {
   const [opacity, setOpacity] = useState(1);
 
   setTimeout(() => {
@@ -16,6 +18,8 @@ const OverlayVideo: FC<OverlayVideoProps> = ({ onPlaying }) => {
   }, 1000);
 
   useEffect(() => {
+    if (opaque) return;
+
     setOpacity(0.7);
   }, []);
 

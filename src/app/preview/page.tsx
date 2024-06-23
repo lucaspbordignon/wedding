@@ -35,12 +35,14 @@ const Home = () => {
 
   return (
     <main className="dark font-header text-base lg:text-lg">
-      <OverlayVideo />
-
       <Header />
 
       <Parallax ref={parallaxReference} pages={5} className="no-scrollbar">
         {/* Page 1 */}
+        <ParallaxLayer speed={0} sticky={{ start: 0, end: 1 }}>
+          <OverlayVideo opaque />
+        </ParallaxLayer>
+
         <ParallaxLayer speed={1} sticky={{ start: 0, end: 1 }}>
           <OverlaySolid />
         </ParallaxLayer>

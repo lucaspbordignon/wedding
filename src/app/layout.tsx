@@ -4,8 +4,6 @@ import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
 
-import Header from "@wedding/components/Header";
-
 import "../globals.css";
 
 const bastiaFont = localFont({
@@ -44,7 +42,7 @@ const RootLayout = ({
     <html lang="en">
       <body
         className={clsx(
-          "text-white bg-black no-scrollbar",
+          "text-white bg-primary no-scrollbar",
           bastiaFont.variable,
           outfitFont.variable
         )}
