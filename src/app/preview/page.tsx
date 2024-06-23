@@ -8,9 +8,10 @@ import OverlaySolid from "@wedding/components/OverlaySolid";
 import TemplateQuote from "@wedding/components/TemplateQuote";
 import TemplateSchedule from "@wedding/components/TemplateSchedule";
 import usePageState from "@wedding/state/page";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScrollIndicator from "@wedding/components/ScrollIndicator";
 import Header from "@wedding/components/Header";
+import clsx from "clsx";
 
 const ANCHORS = {
   home: 0,
@@ -22,6 +23,7 @@ const Home = () => {
   const setScrollYProgress = usePageState((state) => state.setScrollYProgress);
 
   const parallaxReference = useRef<IParallax>(null);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const onScroll = () => {
     if (parallaxReference.current)
@@ -56,10 +58,23 @@ const Home = () => {
     };
   };
 
+  const onParallaxActiveChanged = () => {
+    if (!parallaxReference?.current?.current) return;
+
+    setCurrentPage(
+      Math.floor(parallaxReference.current.current / window.innerHeight)
+    );
+  };
+
   useEffect(onParallaxContainerInitialized, [parallaxReference.current]);
+  useEffect(onParallaxActiveChanged, [parallaxReference.current?.current]);
 
   return (
-    <main className="dark font-header text-base lg:text-lg">
+    <main
+      className={clsx("font-header text-base lg:text-lg", {
+        dark: currentPage !== 4,
+      })}
+    >
       <Header />
 
       <Parallax ref={parallaxReference} pages={5} className="no-scrollbar">

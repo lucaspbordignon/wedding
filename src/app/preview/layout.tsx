@@ -11,8 +11,6 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const Layout: FC<PropsWithChildren> = ({ children }) => (
-  <section className="dark">{children}</section>
-);
+const Layout: FC<PropsWithChildren> = ({ children }) => children;
 
 export default Layout;
