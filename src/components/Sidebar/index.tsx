@@ -37,21 +37,37 @@ const Sidebar: FC = () => {
         className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg"
         onClick={onClose}
       >
-        <Link href="/preview#home">INÍCIO</Link>
+        <Link className="hover:underline" href="/preview#home">
+          INÍCIO
+        </Link>
 
-        <Link href="/preview#schedule">PROGRAMAÇÃO</Link>
+        <Link className="hover:underline" href="/preview#schedule">
+          PROGRAMAÇÃO
+        </Link>
 
-        <Link href="/location">LOCAL</Link>
+        <Link className="hover:underline" href="/location">
+          LOCAL
+        </Link>
 
-        <Link href="/rsvp">PRESENÇA</Link>
+        <Link className="hover:underline" href="/rsvp">
+          PRESENÇA
+        </Link>
 
-        <Link href="/hotels">ESTADIA</Link>
+        <Link className="hover:underline" href="/hotels">
+          ESTADIA
+        </Link>
 
-        <Link href="/gifts">PRESENTES</Link>
+        <Link className="hover:underline" href="/gifts">
+          PRESENTES
+        </Link>
 
-        <Link href="/galeria">GALERIA</Link>
+        <Link className="hover:underline" href="/galeria">
+          GALERIA
+        </Link>
 
-        <Link href="/maids-of-honor">PADRINHOS</Link>
+        <Link className="hover:underline" href="/maids-of-honor">
+          PADRINHOS
+        </Link>
       </nav>
     </aside>
   );
