@@ -25,10 +25,7 @@ const Page = () => (
     </section>
 
     <section className="w-full flex flex-col gap-y-4">
-      <a
-        href="https://maps.apple.com/?address=Avenida%20Tom%20Traugott%20Wildi,%208%E2%80%93119,%20Praia%20Brava,%20Florian%C3%B3polis%20-%20SC,%2088056-800,%20Brazil&auid=905360198410052461&ll=-27.393396,-48.414694&lsp=9902&q=Le%20BarBaron"
-        className="w-full"
-      >
+      <a href="https://maps.app.goo.gl/dq7WtmBwQhDTVJKH7" className="w-full">
         <Button>Ver no mapa</Button>
       </a>
     </section>
