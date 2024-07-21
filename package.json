@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "supabase gen types typescript --project-id elsoezhobpdlrxpdggfg > src/lib/db/types.ts"
   },
   "dependencies": {
     "@mux/mux-player-react": "^2.3.3",
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
     "@stripe/stripe-js": "^3.3.0",
+    "@supabase/supabase-js": "^2.44.4",
     "@vercel/analytics": "^1.2.2",
     "@vercel/kv": "^2.0.0",
     "clsx": "^2.1.1",
