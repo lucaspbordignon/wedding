@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import { Outfit } from "next/font/google";
 import clsx from "clsx";
 
+import Authenticator from "@wedding/components/Authenticator";
+
 import "../globals.css";
 
 const bastiaFont = localFont({
@@ -50,6 +52,7 @@ const RootLayout = ({
         {children}
 
         <Analytics />
+        <Authenticator />
       </body>
     </html>
   );

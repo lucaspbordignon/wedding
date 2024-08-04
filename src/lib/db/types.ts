@@ -9,6 +9,56 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      invitee_groups: {
+        Row: {
+          created_at: string
+          description: string
+          handle: string
+          id: number
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          handle?: string
+          id?: number
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          handle?: string
+          id?: number
+        }
+        Relationships: []
+      }
+      invitees: {
+        Row: {
+          created_at: string
+          id: number
+          invitee_group_id: number
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          invitee_group_id: number
+          name: string
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          invitee_group_id?: number
+          name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "invitees_invitee_group_id_fkey"
+            columns: ["invitee_group_id"]
+            isOneToOne: false
+            referencedRelation: "invitee_groups"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       products: {
         Row: {
           created_at: string
@@ -38,6 +88,41 @@ export type Database = {
           price?: number
         }
         Relationships: []
+      }
+      qr_codes: {
+        Row: {
+          created_at: string
+          description: string | null
+          destination_url: string
+          id: number
+          image_url: string
+          invitee_group_id: number | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          destination_url: string
+          id?: number
+          image_url: string
+          invitee_group_id?: number | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          destination_url?: string
+          id?: number
+          image_url?: string
+          invitee_group_id?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "qr_codes_invitee_group_id_fkey"
+            columns: ["invitee_group_id"]
+            isOneToOne: false
+            referencedRelation: "invitee_groups"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
