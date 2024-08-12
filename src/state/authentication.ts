@@ -1,5 +1,6 @@
 import { Database } from "@wedding/lib/db/types";
 import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 type InviteeGroup = Database["public"]["Tables"]["invitee_groups"]["Row"];
 
@@ -14,10 +15,18 @@ interface AuthenticationActions {
 
 const useAuthenticationState = create<
   AuthenticationState & AuthenticationActions
->()((set) => ({
-  inviteeGroup: undefined,
+>()(
+  persist(
+    (set) => ({
+      inviteeGroup: undefined,
 
-  setInviteeGroup: (input) => set({ inviteeGroup: input }),
-}));
+      setInviteeGroup: (input) => set({ inviteeGroup: input }),
+    }),
+    {
+      name: "authentication",
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
+);
 
 export default useAuthenticationState;

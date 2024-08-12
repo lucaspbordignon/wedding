@@ -7,12 +7,14 @@ import { FC } from "react";
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   href?: string;
   primary?: boolean;
+  loading?: boolean;
 };
 
 const Button: FC<ButtonProps> = ({
   href,
   onClick,
   primary = false,
+  loading = false,
   ...props
 }) => {
   const router = useRouter();
@@ -29,11 +31,13 @@ const Button: FC<ButtonProps> = ({
       className={clsx(
         "font-sans font-semibold cursor-pointer",
         "border border-primary rounded-md min-h-11 w-full",
-        "hover:bg-primary hover:text-white",
+        "disabled:opacity-30",
         {
+          "hover:bg-primary hover:text-white": !primary,
           "bg-primary text-white hover:bg-white hover:text-primary": primary,
         }
       )}
+      disabled={loading || props.disabled}
       {...props}
     />
   );

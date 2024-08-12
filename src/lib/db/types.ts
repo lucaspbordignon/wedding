@@ -11,18 +11,21 @@ export type Database = {
     Tables: {
       invitee_groups: {
         Row: {
+          attending: boolean | null
           created_at: string
           description: string
           handle: string
           id: number
         }
         Insert: {
+          attending?: boolean | null
           created_at?: string
           description: string
           handle?: string
           id?: number
         }
         Update: {
+          attending?: boolean | null
           created_at?: string
           description?: string
           handle?: string
