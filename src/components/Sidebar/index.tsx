@@ -64,10 +64,6 @@ const Sidebar: FC = () => {
         <Link className="hover:underline" href="/galeria">
           GALERIA
         </Link>
-
-        <Link className="hover:underline" href="/maids-of-honor">
-          PADRINHOS
-        </Link>
       </nav>
     </aside>
   );

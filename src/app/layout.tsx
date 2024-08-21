@@ -7,6 +7,7 @@ import clsx from "clsx";
 import Authenticator from "@wedding/components/Authenticator";
 
 import "../globals.css";
+import { Suspense } from "react";
 
 const bastiaFont = localFont({
   src: "../styles/Bastia-Bold.otf",
@@ -52,7 +53,10 @@ const RootLayout = ({
         {children}
 
         <Analytics />
-        <Authenticator />
+
+        <Suspense>
+          <Authenticator />
+        </Suspense>
       </body>
     </html>
   );
