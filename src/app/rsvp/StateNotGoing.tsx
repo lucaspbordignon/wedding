@@ -2,15 +2,12 @@ import Button from "@wedding/components/Button";
 
 const StateNotGoing = () => (
   <section className="flex flex-col justify-between size-full mt-4">
-    <section className="flex flex-col gap-y-4 h-full">
-      <img
-        alt="icon"
-        src="/assets/rejected.png"
-        className="object-contain w-full lg:max-h-[28rem]"
-      />
+    <section className="flex flex-col gap-y-2 h-full items-center">
+      <p className="text-7xl">😭</p>
 
-      <h2>Ah! Que pena</h2>
-      <p>
+      <h2 className="font-header text-2xl font-bold">Ah! Que pena</h2>
+
+      <p className="text-center text-primary px-4">
         Se conseguir mudar seus planos, pode alterar a confirmação aqui pelo
         site até o dia 01/02/2025.
       </p>

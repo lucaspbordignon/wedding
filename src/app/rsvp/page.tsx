@@ -64,7 +64,7 @@ const Page = () => {
         >
           <div
             className={clsx(
-              "w-full border p-6 rounded-lg flex items-center space-x-2",
+              "w-full border p-6 rounded-lg flex items-center space-x-2 cursor-pointer",
               {
                 "border-primary": selected === "yes",
               }
@@ -76,7 +76,7 @@ const Page = () => {
 
           <div
             className={clsx(
-              "w-full border p-6 rounded-lg flex items-center space-x-2",
+              "w-full border p-6 rounded-lg flex items-center space-x-2 cursor-pointer",
               {
                 "border-primary": selected === "no",
               }
