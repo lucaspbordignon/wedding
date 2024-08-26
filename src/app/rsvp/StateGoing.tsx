@@ -51,7 +51,7 @@ const StateGoing = () => {
           Voltar para o início
         </Button>
 
-        <Button onClick={onSaveResponse} loading={loading} outline>
+        <Button onClick={onSaveResponse} loading={loading}>
           Não vou conseguir ir!
         </Button>
       </section>

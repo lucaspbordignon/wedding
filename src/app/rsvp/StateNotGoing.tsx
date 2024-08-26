@@ -47,7 +47,7 @@ const StateNotGoing = () => {
           Voltar para o início
         </Button>
 
-        <Button onClick={onSaveResponse} loading={loading} outline>
+        <Button onClick={onSaveResponse} loading={loading}>
           Vou conseguir ir!
         </Button>
       </section>
