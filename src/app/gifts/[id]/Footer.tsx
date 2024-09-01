@@ -8,7 +8,7 @@ interface FooterProps {
 }
 
 const Footer = ({ product }: FooterProps) => (
-  <section className="flex flex-col gap-2 w-full">
+  <section className="fixed bottom-0 pb-6 flex flex-col gap-2 w-full max-w-screen-md px-6 lg:px-24 bg-white">
     <Button
       onClick={() => {
         alert("Add the QR code");

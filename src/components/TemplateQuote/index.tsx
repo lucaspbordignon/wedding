@@ -8,10 +8,22 @@ const TemplateQuote = () => {
         "font-sans font-extralight text-white"
       )}
     >
-      <section className="flex flex-col justify-start gap-y-9 max-w-screen-sm">
+      <section className="flex flex-col justify-start gap-y-24 max-w-screen-sm">
         <p>
-          Vocês fizeram parte da nossa história, e ficaremos muito felizes em
-          celebrar mais esse momento importante nas nossas vidas com vocês!
+          Nossa jornada até aqui foi repleta de momentos incríveis e aventuras.
+          Nestes 6 anos dividimos felicidades e desafios, realizamos sonhos e
+          planejamos novos, aprendemos e crescemos muito.
+        </p>
+
+        <p>
+          Agora estamos prontos para embarcar nesta nova aventura juntos,{" "}
+          <strong>o nosso para sempre</strong>.
+        </p>
+
+        <p>
+          Cada um de vocês é muito importante para nós e fez parte da nossa
+          história, por isso ficaremos muito felizes em celebrar mais esse
+          momento das nossas vidas com vocês!
         </p>
 
         <p>- Gabi & Lucas</p>

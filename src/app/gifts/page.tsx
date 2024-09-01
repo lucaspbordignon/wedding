@@ -1,8 +1,6 @@
 import ContainerBase from "@wedding/components/ContainerBase";
 import Header from "@wedding/components/Header";
 
-//import Price from "./Price";
-//import Image from "./Image";
 import { client } from "@wedding/lib/db/server";
 import Link from "next/link";
 
@@ -13,21 +11,29 @@ const Page = async () => {
   const products = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between px-0">
+    <ContainerBase className="justify-between">
       <Header />
 
-      <section className="grid grid-cols-2 size-full">
+      <section className="grid grid-cols-1 md:grid-cols-2 size-full gap-3">
         {products?.map((product) => (
-          <Link href={`/gifts/${product.id}`} key={product.id}>
-            <div className="col-span-1 relative bg-primary cursor-pointer hover:opacity-70">
-              <span className="text-white font-header text-xl absolute top-1/2 left-16 flex flex-col gap-y-2">
-                {product.name}
+          <Link
+            className="col-span-1 relative bg-primary cursor-pointer hover:opacity-70 aspect-square"
+            href={`/gifts/${product.id}`}
+            key={product.id}
+          >
+            <div
+              className="size-full bg-cover opacity-20"
+              style={{
+                backgroundImage: `url(${product.image_url})`,
+              }}
+            />
+            <span className="text-white font-header text-xl absolute top-[45%] left-6 flex flex-col gap-y-2">
+              {product.name}
 
-                <div className="text-white font-header text-sm w-10/12">
-                  R${product.price}
-                </div>
-              </span>
-            </div>
+              <div className="text-white font-header text-sm w-10/12">
+                R${product.price}
+              </div>
+            </span>
           </Link>
         ))}
       </section>

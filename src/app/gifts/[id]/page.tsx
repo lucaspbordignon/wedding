@@ -22,11 +22,11 @@ const Page = async ({ params: { id } }: PageParams) => {
   const product = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between px-0">
+    <ContainerBase className="justify-between">
       <Header />
 
       {product ? (
-        <section className="flex flex-col items-center gap-16 size-full text-primary">
+        <section className="flex flex-col items-center gap-6 size-full text-primary">
           <Image
             className="shadow"
             src={product.image_url!}
@@ -35,20 +35,18 @@ const Page = async ({ params: { id } }: PageParams) => {
             alt={product?.name}
           />
 
-          <div className="flex flex-col justify-start w-full px-24">
+          <div className="flex flex-col justify-start w-full">
             <h2 className="text-3xl font-sans text-primary font-medium">
               {product.name}
             </h2>
 
             {product.description && (
-              <h4 className="text-lg font-sans text-primary font-normal">
+              <h4 className="text-lg font-sans text-primary font-light">
                 {product.description}
               </h4>
             )}
-          </div>
 
-          <div className="flex flex-col justify-start w-full px-24">
-            <h4 className="text-lg font-sans text-primary font-normal">
+            <h4 className="text-lg font-sans text-primary font-normal mt-6">
               R$ {product.price}
             </h4>
           </div>
