@@ -11,10 +11,10 @@ const Page = async () => {
   const products = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between">
+    <ContainerBase className="justify-between md:max-w-screen-lg">
       <Header />
 
-      <section className="grid grid-cols-1 md:grid-cols-2 size-full gap-3">
+      <section className="grid grid-cols-1 md:grid-cols-3 size-full gap-3">
         {products?.map((product) => (
           <Link
             className="col-span-1 relative bg-primary cursor-pointer hover:opacity-70 aspect-square"
