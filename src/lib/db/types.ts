@@ -69,6 +69,8 @@ export type Database = {
           id: number
           image_url: string | null
           name: string
+          payment_code: string | null
+          payment_qr_code: string | null
           payment_url: string
           price: number
         }
@@ -78,6 +80,8 @@ export type Database = {
           id?: number
           image_url?: string | null
           name: string
+          payment_code?: string | null
+          payment_qr_code?: string | null
           payment_url: string
           price: number
         }
@@ -87,6 +91,8 @@ export type Database = {
           id?: number
           image_url?: string | null
           name?: string
+          payment_code?: string | null
+          payment_qr_code?: string | null
           payment_url?: string
           price?: number
         }
