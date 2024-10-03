@@ -36,7 +36,7 @@ const ContainerBase: FC<ContainerBaseProps> = ({ className, children }) => {
         <animated.div
           style={style}
           className={clsx(
-            "w-full min-h-dvh p-6 max-w-screen-sm mx-auto",
+            "w-full h-dvh p-6 max-w-screen-sm mx-auto",
             "flex flex-1 flex-col items-center",
             "pt-24 lg:pt-32",
             className
