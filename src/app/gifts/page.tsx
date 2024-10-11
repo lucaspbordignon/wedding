@@ -11,7 +11,7 @@ const Page = async () => {
   const products = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between md:max-w-screen-lg">
+    <ContainerBase className="justify-between md:max-w-screen-lg h-full">
       <Header />
 
       <section className="grid grid-cols-1 md:grid-cols-3 size-full gap-3">

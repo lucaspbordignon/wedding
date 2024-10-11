@@ -6,9 +6,14 @@ import { FC, PropsWithChildren, useEffect } from "react";
 
 interface ContainerBaseProps extends PropsWithChildren {
   className?: string;
+  wide?: boolean;
 }
 
-const ContainerBase: FC<ContainerBaseProps> = ({ className, children }) => {
+const ContainerBase: FC<ContainerBaseProps> = ({
+  className,
+  wide = false,
+  children,
+}) => {
   const ref = useSpringRef();
 
   const transitions = useTransition(0, {
@@ -36,9 +41,13 @@ const ContainerBase: FC<ContainerBaseProps> = ({ className, children }) => {
         <animated.div
           style={style}
           className={clsx(
-            "w-full h-dvh p-6 max-w-screen-sm mx-auto",
+            "w-full h-dvh p-6 mx-auto",
             "flex flex-1 flex-col items-center",
             "pt-24 lg:pt-32",
+            {
+              "max-w-screen-lg": wide,
+              "max-w-screen-sm": !wide,
+            },
             className
           )}
         >

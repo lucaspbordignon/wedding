@@ -7,7 +7,7 @@ const Page = () => (
 
     <section className="grid grid-cols-2">
       <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2 left-16 z-20">
+        <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
           pré-wedding
         </span>
 
@@ -54,7 +54,7 @@ const Page = () => (
       </div>
 
       <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2 left-16 z-20">
+        <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
           a festa <br />
           pelos convidados
           <p className="font-thin font-sans text-sm">câmeras analógicas</p>
@@ -68,7 +68,7 @@ const Page = () => (
       </div>
 
       <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2 left-16 z-20">
+        <span className="text-white font-header text-xl absolute top-1/2  left-8 md:left-16 z-20">
           a festa <br /> pelo fotógrafo
         </span>
 
