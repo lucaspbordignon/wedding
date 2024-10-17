@@ -28,7 +28,7 @@ const Page = async ({ params: { id } }: PageParams) => {
       {product ? (
         <section className="flex flex-col items-center gap-6 size-full text-primary">
           <Image
-            className="shadow"
+            className="shadow max-h-[30vh] object-cover"
             src={product.image_url!}
             width={320}
             height={320}
