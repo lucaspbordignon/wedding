@@ -9,7 +9,7 @@ const Page = () => (
     <Header />
 
     <section className="grid grid-cols-1 lg:grid-cols-2 lg:mb-2">
-      <div className="col-span-1 h-[40vh] w-full relative bg-primary">
+      <div className="col-span-1 min-h-[36vh] w-full relative bg-primary">
         <Link href="https://www.praiabrava.com.br/" target="_blank">
           <img
             src="/assets/brava-hotel.jpg"
@@ -19,7 +19,7 @@ const Page = () => (
         </Link>
       </div>
 
-      <div className="col-span-1 h-[40vh] w-full bg-primary px-6 py-8">
+      <div className="col-span-1 min-h-[36vh] w-full bg-primary px-6 py-8">
         <h1 className="text-3xl font-header text-white font-medium">
           Praia Brava Hotel
         </h1>
