@@ -1,6 +1,7 @@
 import ContainerBase from "@wedding/components/ContainerBase";
 import Header from "@wedding/components/Header";
 import Input from "@wedding/app/gifts/[id]/pix/Input";
+import ConfirmedButton from "@wedding/app/gifts/[id]/pix/ConfirmedButton";
 
 import { client } from "@wedding/lib/db/server";
 
@@ -18,10 +19,11 @@ const Page = async ({ params: { id } }: PageParams) => {
     .select("*")
     .eq("id", id)
     .single();
+
   const product = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between">
+    <ContainerBase className="justify-between h-full">
       <Header />
 
       {product ? (
@@ -45,20 +47,24 @@ const Page = async ({ params: { id } }: PageParams) => {
               Para realizar o pagamento via PIX, utilize o QR code abaixo:
             </p>
 
-            <section className="w-full flex items-center justify-center">
+            <section className="w-full flex items-center justify-center my-4">
               <img
                 src={product.payment_qr_code ?? ""}
-                className="object-contain"
-                width={320}
-                height={320}
+                className="object-contain aspect-square"
+                width={280}
+                height={280}
               />
             </section>
 
-            <p className="text-lg font-sans text-primary font-light mt-6">
+            <p className="text-lg font-sans text-primary font-light mt-6 mb-4">
               Ou, se preferir, copie e cole o código abaixo:
             </p>
 
             <Input value={product.payment_code ?? ""} />
+
+            <hr className="border-0 border-b border-gray-100 my-6" />
+
+            <ConfirmedButton />
           </div>
         </section>
       ) : (

@@ -19,6 +19,7 @@ const Button: FC<ButtonProps> = ({
   loading = false,
   outline = false,
   mobile = false,
+  className,
   ...props
 }) => {
   const router = useRouter();
@@ -42,7 +43,8 @@ const Button: FC<ButtonProps> = ({
             primary,
           border: !outline,
           "block lg:hidden": mobile,
-        }
+        },
+        className
       )}
       disabled={loading || props.disabled}
       {...props}

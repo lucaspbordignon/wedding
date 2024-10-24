@@ -8,6 +8,7 @@ import Authenticator from "@wedding/components/Authenticator";
 
 import "../globals.css";
 import { Suspense } from "react";
+import { Toaster } from "@wedding/components/Toaster";
 
 const bastiaFont = localFont({
   src: "../styles/Bastia-Bold.otf",
@@ -53,6 +54,8 @@ const RootLayout = ({
         {children}
 
         <Analytics />
+
+        <Toaster />
 
         <Suspense>
           <Authenticator />
