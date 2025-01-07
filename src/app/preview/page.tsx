@@ -108,7 +108,7 @@ const Home = () => {
         {/* Page 3 */}
         <ParallaxLayer offset={2} speed={0}>
           <img
-            src="/assets/cover.png"
+            src="/assets/cover.jpg"
             loading="eager"
             className="object-cover w-full h-full max-h-dvh"
           />
