@@ -110,7 +110,7 @@ const Home = () => {
           <img
             src="/assets/cover.jpg"
             loading="eager"
-            className="object-contain w-full min-h-dvh"
+            className="object-cover w-full min-h-dvh"
           />
         </ParallaxLayer>
 
