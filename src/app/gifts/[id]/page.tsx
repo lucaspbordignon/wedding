@@ -41,9 +41,10 @@ const Page = async ({ params: { id } }: PageParams) => {
             </h2>
 
             {product.description && (
-              <h4 className="text-lg font-sans text-primary font-light">
-                {product.description}
-              </h4>
+              <h4
+                className="text-base font-sans text-primary font-light"
+                dangerouslySetInnerHTML={{ __html: product.description }}
+              />
             )}
 
             <h4 className="text-lg font-sans text-primary font-normal mt-6">
