@@ -80,10 +80,48 @@ const Page = () => (
       </div>
     </section>
 
-    <section className="grid grid-cols-1 lg:grid-cols-3 w-full gap-2">
+    <section className="grid grid-cols-1 lg:grid-cols-2 w-full gap-2">
       <h3 className="col-span-1 block lg:hidden mt-6 mb-2 text-lg text-primary font-bold">
         Outros hotéis na região
       </h3>
+
+      <div className="col-span-1 h-[40vh] relative bg-primary">
+        <Link href="https://www.hoteltorresdacachoeira.com" target="_blank">
+          <span
+            className={clsx(
+              "text-white font-header text-xl absolute top-1/2 left-8 lg:left-16 z-20",
+              "hover:opacity-70"
+            )}
+          >
+            Torres da Cachoeira
+          </span>
+
+          <img
+            src="/assets/torres.jpg"
+            loading="eager"
+            className="object-cover size-full opacity-30 hover:opacity-80"
+          />
+        </Link>
+      </div>
+
+      <div className="col-span-1 h-[40vh] relative bg-primary">
+        <Link href="https://balmarehotel.com.br" target="_blank">
+          <span
+            className={clsx(
+              "text-white font-header text-xl absolute top-1/2 left-8 lg:left-20 z-20",
+              "hover:opacity-70"
+            )}
+          >
+            Balmare Hotel
+          </span>
+
+          <img
+            src="/assets/balmare.jpeg"
+            loading="eager"
+            className="object-cover size-full opacity-30 hover:opacity-80"
+          />
+        </Link>
+      </div>
 
       <div className="col-span-1 h-[40vh] relative bg-primary">
         <Link
@@ -101,25 +139,6 @@ const Page = () => (
 
           <img
             src="/assets/costa.jpg"
-            loading="eager"
-            className="object-cover size-full opacity-30 hover:opacity-80"
-          />
-        </Link>
-      </div>
-
-      <div className="col-span-1 h-[40vh] relative bg-primary">
-        <Link href="https://www.hoteltorresdacachoeira.com" target="_blank">
-          <span
-            className={clsx(
-              "text-white font-header text-xl absolute top-1/2 left-8 lg:left-16 z-20",
-              "hover:opacity-70"
-            )}
-          >
-            Torres da Cachoeira
-          </span>
-
-          <img
-            src="/assets/torres.jpg"
             loading="eager"
             className="object-cover size-full opacity-30 hover:opacity-80"
           />
