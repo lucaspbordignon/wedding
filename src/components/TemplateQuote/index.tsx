@@ -8,7 +8,7 @@ const TemplateQuote = () => {
         "font-sans font-extralight text-white"
       )}
     >
-      <section className="flex flex-col justify-start gap-y-24 max-w-screen-sm">
+      <section className="flex flex-col justify-start gap-y-16 max-w-screen-sm">
         <p>
           Nossa jornada até aqui foi repleta de momentos incríveis e aventuras.
           Nestes 6 anos dividimos felicidades e desafios, realizamos sonhos e

@@ -29,21 +29,24 @@ const Page = async ({ params: { id } }: PageParams) => {
       {product ? (
         <section className="flex flex-col items-center gap-6 size-full text-primary">
           <div className="flex flex-col justify-start w-full">
-            <h2 className="text-3xl font-sans text-primary font-medium">
+            <h2 className="text-3xl font-sans text-primary font-medium mb-1">
               {product.name}
             </h2>
 
             {product.description && (
-              <h4 className="text-lg font-sans text-primary font-light">
-                {product.description}
-              </h4>
+              <h4
+                className="text-base font-sans text-primary font-light"
+                dangerouslySetInnerHTML={{ __html: product.description }}
+              />
             )}
 
-            <h4 className="text-lg font-sans text-primary font-normal mt-6">
+            <h4 className="text-2xl font-sans text-primary font-normal mt-6">
               R$ {product.price}
             </h4>
 
-            <p className="text-lg font-sans text-primary font-light mt-6">
+            <hr className="border-0 border-b border-gray-100 my-3" />
+
+            <p className="text-base font-sans text-primary font-light mt-6">
               Para realizar o pagamento via PIX, utilize o QR code abaixo:
             </p>
 

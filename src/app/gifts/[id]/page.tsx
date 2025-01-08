@@ -36,7 +36,7 @@ const Page = async ({ params: { id } }: PageParams) => {
           />
 
           <div className="flex flex-col justify-start w-full">
-            <h2 className="text-3xl font-sans text-primary font-medium">
+            <h2 className="text-3xl font-sans text-primary font-medium mb-1">
               {product.name}
             </h2>
 
@@ -47,7 +47,7 @@ const Page = async ({ params: { id } }: PageParams) => {
               />
             )}
 
-            <h4 className="text-lg font-sans text-primary font-normal mt-6">
+            <h4 className="text-xl font-sans text-primary font-normal mt-6">
               R$ {product.price}
             </h4>
           </div>

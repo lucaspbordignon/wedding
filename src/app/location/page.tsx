@@ -3,7 +3,7 @@ import ContainerBase from "@wedding/components/ContainerBase";
 import Header from "@wedding/components/Header";
 
 const Page = () => (
-  <ContainerBase className="justify-between">
+  <ContainerBase className="justify-between lg:pt-20">
     <Header />
 
     <section className="w-full flex flex-col gap-y-8">

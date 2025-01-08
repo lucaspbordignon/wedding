@@ -33,35 +33,40 @@ const Sidebar: FC = () => {
         <X onClick={onClose} className="cursor-pointer" />
       </header>
 
-      <nav
-        className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg"
-        onClick={onClose}
-      >
-        <Link className="hover:underline" href="/preview#home">
+      <nav className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg">
+        <Link
+          className="hover:underline"
+          href="/preview#home"
+          onClick={onClose}
+        >
           INÍCIO
         </Link>
 
-        <Link className="hover:underline" href="/preview#schedule">
+        <Link
+          className="hover:underline"
+          href="/preview#schedule"
+          onClick={onClose}
+        >
           PROGRAMAÇÃO
         </Link>
 
-        <Link className="hover:underline" href="/location">
+        <Link className="hover:underline" href="/location" onClick={onClose}>
           LOCAL
         </Link>
 
-        <Link className="hover:underline" href="/rsvp">
+        <Link className="hover:underline" href="/rsvp" onClick={onClose}>
           PRESENÇA
         </Link>
 
-        <Link className="hover:underline" href="/hotels">
+        <Link className="hover:underline" href="/hotels" onClick={onClose}>
           ESTADIA
         </Link>
 
-        <Link className="hover:underline" href="/gifts">
+        <Link className="hover:underline" href="/gifts" onClick={onClose}>
           PRESENTES
         </Link>
 
-        <Link className="hover:underline" href="/galeria">
+        <Link className="hover:underline" href="/galeria" onClick={onClose}>
           GALERIA
         </Link>
       </nav>

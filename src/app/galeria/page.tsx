@@ -1,31 +1,37 @@
 import ContainerBase from "@wedding/components/ContainerBase";
 import Header from "@wedding/components/Header";
+import Link from "next/link";
 
 const Page = () => (
   <ContainerBase className="justify-between px-0">
     <Header />
 
     <section className="grid grid-cols-2">
-      <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
-          pré-wedding
-        </span>
+      <Link
+        href="https://alanvieira.pixieset.com/gabriela-e-lucas/"
+        target="_blank"
+      >
+        <div className="col-span-1 h-[40vh] relative bg-primary">
+          <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
+            pré-wedding
+          </span>
 
-        <img
-          src="/assets/cover.png"
-          loading="eager"
-          className="object-cover size-full opacity-40"
-        />
-      </div>
+          <img
+            src="/assets/cover.jpg"
+            loading="eager"
+            className="object-cover size-full opacity-40"
+          />
+        </div>
+      </Link>
 
       <div className="col-span-1 h-[40vh] size-full bg-primary px-6 py-8">
         <h1 className="text-3xl font-header text-white font-medium">Galeria</h1>
 
-        <p className="text-white text-base mt-4">
+        <p className="text-white text-xm md:text-base mt-4">
           Após o casamento vamos compartilhar as fotos da festa por aqui.
         </p>
 
-        <p className="text-white text-base mt-4">
+        <p className="text-white text-sm md:text-base mt-4">
           Enquanto isso, nosso pré wedding e outros registros já estão
           disponíveis.
         </p>
@@ -61,7 +67,7 @@ const Page = () => (
         </span>
 
         <img
-          src="/assets/cover.png"
+          src="/assets/galery-placeholder.jpg"
           loading="eager"
           className="object-cover size-full opacity-40"
         />
@@ -73,7 +79,7 @@ const Page = () => (
         </span>
 
         <img
-          src="/assets/cover.png"
+          src="/assets/cover.jpg"
           loading="eager"
           className="object-cover size-full opacity-40"
         />
