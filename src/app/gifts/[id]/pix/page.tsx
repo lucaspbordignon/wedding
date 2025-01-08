@@ -29,7 +29,7 @@ const Page = async ({ params: { id } }: PageParams) => {
       {product ? (
         <section className="flex flex-col items-center gap-6 size-full text-primary">
           <div className="flex flex-col justify-start w-full">
-            <h2 className="text-3xl font-sans text-primary font-medium mb-1">
+            <h2 className="text-2xl lg:text-3xl font-sans text-primary font-medium mb-1">
               {product.name}
             </h2>
 

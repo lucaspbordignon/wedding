@@ -22,21 +22,22 @@ const Page = async ({ params: { id } }: PageParams) => {
   const product = productsResponse.data;
 
   return (
-    <ContainerBase className="justify-between">
+    <ContainerBase className="justify-between pt-20">
       <Header />
 
       {product ? (
         <section className="flex flex-col items-center gap-6 size-full text-primary">
           <Image
-            className="shadow max-h-[30vh] object-cover"
+            className="max-h-[30vh] w-full object-contain"
             src={product.image_url!}
             width={320}
             height={320}
+            objectFit="contain"
             alt={product?.name}
           />
 
           <div className="flex flex-col justify-start w-full">
-            <h2 className="text-3xl font-sans text-primary font-medium mb-1">
+            <h2 className="text-2xl lg:text-3xl font-sans text-primary font-medium mb-1">
               {product.name}
             </h2>
 
