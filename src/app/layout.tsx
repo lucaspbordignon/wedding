@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
@@ -60,6 +61,8 @@ const RootLayout = ({
         <Suspense>
           <Authenticator />
         </Suspense>
+
+        <SpeedInsights />
       </body>
     </html>
   );
