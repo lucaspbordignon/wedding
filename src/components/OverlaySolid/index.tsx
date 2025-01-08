@@ -14,7 +14,7 @@ const OverlaySolid: FC = () => {
 
   return (
     <animated.aside
-      className="min-h-screen bg-primary"
+      className="min-h-dvh bg-primary"
       style={{ width: `${width}%` }}
     />
   );
