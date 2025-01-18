@@ -8,7 +8,7 @@ const Page = () => (
 
     <section className="grid grid-cols-2">
       <Link
-        href="https://alanvieira.pixieset.com/gabriela-e-lucas/"
+        href="https://alanvieira.pixieset.com/gabriela-e-lucas/f/37688964/"
         target="_blank"
       >
         <div className="col-span-1 h-[40vh] relative bg-primary">
@@ -17,17 +17,17 @@ const Page = () => (
           </span>
 
           <img
-            src="/assets/cover.jpg"
+            src="/assets/cover-b.jpg"
             loading="eager"
             className="object-cover size-full opacity-40"
           />
         </div>
       </Link>
 
-      <div className="col-span-1 h-[40vh] size-full bg-primary px-6 py-8">
+      <div className="col-span-1 h-[40vh] size-full bg-primary px-6 py-8 pt-16">
         <h1 className="text-3xl font-header text-white font-medium">Galeria</h1>
 
-        <p className="text-white text-xm md:text-base mt-4">
+        <p className="text-white text-sm md:text-base mt-4">
           Após o casamento vamos compartilhar as fotos da festa por aqui.
         </p>
 
@@ -79,7 +79,7 @@ const Page = () => (
         </span>
 
         <img
-          src="/assets/cover.jpg"
+          src="/assets/cover-c.jpg"
           loading="eager"
           className="object-cover size-full opacity-40"
         />
