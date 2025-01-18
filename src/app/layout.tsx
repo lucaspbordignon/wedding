@@ -21,7 +21,7 @@ const outfitFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Save the date",
+  title: "Casamento - Gabriela e Lucas",
   description: "Casamento - Gabriela e Lucas",
   openGraph: {
     images: ["/preview.jpg"],

@@ -44,7 +44,7 @@ const Default = () => {
 
         <div className="flex flex-col gap-y-1">
           <p className="font-light">Podemos contar com a presença de vocês?</p>
-          <p className="text-sm">Confirmar até 01/02/2025 </p>
+          <p className="text-sm">Confirmar até 25/02/2025 </p>
         </div>
       </section>
 

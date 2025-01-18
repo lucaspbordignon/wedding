@@ -11,8 +11,8 @@ const Page = () => {
   const inviteeGroup = useAuthenticationState((state) => state.inviteeGroup);
 
   const isNotResponded = !inviteeGroup || inviteeGroup.attending === null;
-  const isConfirmed = inviteeGroup && inviteeGroup.attending;
-  const isRejected = inviteeGroup && !inviteeGroup.attending;
+  const isConfirmed = !isNotResponded && inviteeGroup && inviteeGroup.attending;
+  const isRejected = !isNotResponded && inviteeGroup && !inviteeGroup.attending;
 
   return (
     <ContainerBase className="justify-between">

@@ -32,8 +32,7 @@ const Page = () => (
         </p>
 
         <p className="text-white text-sm md:text-base mt-4">
-          Enquanto isso, nosso pré wedding e outros registros já estão
-          disponíveis.
+          Enquanto isso, os registros da nossa cerimônia religiosa já estão disponíveis.
         </p>
 
         <svg

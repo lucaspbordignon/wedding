@@ -1,32 +1,48 @@
+import useAuthenticationState from "@wedding/state/authentication";
 import clsx from "clsx";
 
 const TemplateQuote = () => {
+  const inviteeGroup = useAuthenticationState((state) => state.inviteeGroup);
+
   return (
     <section
       className={clsx(
-        "min-h-dvh w-full flex flex-col bg-primary p-6 justify-center items-center",
+        "min-h-dvh w-full flex flex-col bg-primary px-6 pb-10 justify-center items-center",
         "font-sans font-extralight text-white"
       )}
     >
-      <section className="flex flex-col justify-start gap-y-16 max-w-screen-sm">
-        <p>
-          Nossa jornada até aqui foi repleta de momentos incríveis e aventuras.
-          Nestes 6 anos dividimos felicidades e desafios, realizamos sonhos e
-          planejamos novos, aprendemos e crescemos muito.
-        </p>
+      <section className="flex flex-col justify-start gap-y-12 max-w-screen-sm">
+        {inviteeGroup && (
+          <h1 className="text-3xl font-header text-white font-medium">
+            {inviteeGroup?.description}
+          </h1>
+        )}
 
-        <p>
-          Agora estamos prontos para embarcar nesta nova aventura juntos,{" "}
-          <strong>o nosso para sempre</strong>.
-        </p>
+        <section className="flex flex-col justify-start gap-y-8">
+          <p>
+            Nossa jornada até aqui foi repleta de momentos incríveis e
+            aventuras. Nestes 6 anos dividimos felicidades e desafios,
+            realizamos sonhos e planejamos novos, aprendemos e crescemos muito.
+          </p>
 
-        <p>
-          Cada um de vocês é muito importante para nós e fez parte da nossa
-          história, por isso ficaremos muito felizes em celebrar mais esse
-          momento das nossas vidas com vocês!
-        </p>
+          <p>
+            Agora estamos prontos para embarcar nesta nova aventura juntos,{" "}
+            <strong>o nosso para sempre</strong>.
+          </p>
 
-        <p>- Gabi & Lucas</p>
+          <p>
+            Cada um de vocês é muito importante para nós e fez parte da nossa
+            história, por isso ficaremos muito felizes em celebrar mais esse
+            momento das nossas vidas com vocês!
+          </p>
+
+          <p>Nos vemos em breve.</p>
+
+          <p>
+            Com amor e carinho,
+            <br />- Gabi e Lucas
+          </p>
+        </section>
       </section>
     </section>
   );
