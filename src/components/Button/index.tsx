@@ -38,8 +38,8 @@ const Button: FC<ButtonProps> = ({
         "rounded-md min-h-11 w-full",
         "disabled:opacity-30",
         {
-          "hover:bg-primary hover:text-white border-primary": !primary,
-          "bg-primary text-white hover:bg-white hover:text-primary border-white":
+          "md:hover:bg-primary md:hover:text-white border-primary": !primary,
+          "bg-primary text-white md:hover:bg-white md:hover:text-primary border-white":
             primary,
           border: !outline,
           "block lg:hidden": mobile,
