@@ -4,6 +4,8 @@ import clsx from "clsx";
 const TemplateQuote = () => {
   const inviteeGroup = useAuthenticationState((state) => state.inviteeGroup);
 
+  const isSingle = !inviteeGroup?.description?.includes("&") && !inviteeGroup?.description?.includes(",");
+
   return (
     <section
       className={clsx(
@@ -31,9 +33,9 @@ const TemplateQuote = () => {
           </p>
 
           <p>
-            Cada um de vocês é muito importante para nós e fez parte da nossa
+            {isSingle ? "Você é" : "Vocês são"} muito {isSingle ? "importante" : "importantes"} para nós e {isSingle ? "faz" : "fazem"} parte da nossa
             história, por isso ficaremos muito felizes em celebrar mais esse
-            momento das nossas vidas com vocês!
+            momento juntos!
           </p>
 
           <p>Nos vemos em breve.</p>

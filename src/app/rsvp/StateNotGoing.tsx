@@ -32,22 +32,22 @@ const StateNotGoing = () => {
   return (
     <section className="flex flex-col justify-between size-full ">
       <section className="flex flex-col gap-y-2 h-full justify-center items-center">
-        <p className="text-7xl">😭</p>
+        <p className="text-7xl">🥺</p>
 
         <h2 className="font-header text-2xl font-bold">Ah! Que pena</h2>
 
         <p className="text-center text-primary px-4">
           Se conseguir mudar seus planos, pode alterar a confirmação aqui pelo
-          site até o dia 01/02/2025.
+          site até o dia 25/02/2025.
         </p>
       </section>
 
       <section className="flex flex-col gap-2 w-full">
-        <Button href="/" primary>
+        <Button href="/" primary id="not-going-secondary">
           Voltar para o início
         </Button>
 
-        <Button onClick={onSaveResponse} loading={loading}>
+        <Button onClick={onSaveResponse} loading={loading} id="not-going-primary">
           Vou conseguir ir!
         </Button>
       </section>

@@ -16,7 +16,7 @@ const TemplateSchedule = () => {
           <section className="flex flex-col gap-y-4">
             <p>
               A cerimônia e a festa serão realizadas no dia 29 de março de 2025,
-              às 16h, no Le Barbaron.
+              às 15h30, no Le Barbaron.
             </p>
 
             <p>
@@ -36,6 +36,14 @@ const TemplateSchedule = () => {
               O local é a beira mar, a cerimônia vai ser realizada na areia e a
               festa em um local fechado. Estamos contando com o sol, então fique
               a vontade para trazer seus óculos.
+            </p>
+
+            <p>
+              <strong>Mulheres:</strong> Vestido leve, recomendamos uso de salto bloco
+            </p>
+
+            <p>
+              <strong>Homens:</strong> Camisa, calça e sapato social
             </p>
           </section>
         </section>

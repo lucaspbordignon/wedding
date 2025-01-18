@@ -32,11 +32,7 @@ const StateGoing = () => {
   return (
     <section className="flex flex-col justify-between items-center size-full">
       <section className="flex flex-col gap-y-2 h-full justify-center items-center">
-        <img
-          alt="icon"
-          src="/assets/cheers.png"
-          className="object-contain size-56"
-        />
+        <p className="text-7xl">🥹</p>
 
         <h2 className="font-header text-2xl font-bold">Presença confirmada!</h2>
 
@@ -47,12 +43,12 @@ const StateGoing = () => {
       </section>
 
       <section className="flex flex-col gap-2 w-full">
-        <Button primary href="/">
+        <Button primary href="/" id="going-secondary">
           Voltar para o início
         </Button>
 
-        <Button onClick={onSaveResponse} loading={loading}>
-          Não vou conseguir ir!
+        <Button onClick={onSaveResponse} loading={loading} id="going-primary">
+          Não vou conseguir ir
         </Button>
       </section>
     </section>

@@ -12,7 +12,7 @@ const Page = () => (
         target="_blank"
       >
         <div className="col-span-1 h-[40vh] relative bg-primary">
-          <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
+          <span className="text-white font-header text-xl absolute top-[40%] left-8 md:left-16 z-20">
             cerimônia religiosa
           </span>
 
@@ -24,7 +24,7 @@ const Page = () => (
         </div>
       </Link>
 
-      <div className="col-span-1 h-[40vh] size-full bg-primary px-6 py-8 pt-16">
+      <div className="col-span-1 h-[40vh] size-full bg-primary px-6 py-8 md:pt-16">
         <h1 className="text-3xl font-header text-white font-medium">Galeria</h1>
 
         <p className="text-white text-sm md:text-base mt-4">
@@ -59,7 +59,7 @@ const Page = () => (
       </div>
 
       <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
+        <span className="text-white font-header text-xl absolute top-[40%] left-8 md:left-16 z-20">
           a festa <br />
           pelos convidados
           <p className="font-thin font-sans text-sm">câmeras analógicas</p>
@@ -73,7 +73,7 @@ const Page = () => (
       </div>
 
       <div className="col-span-1 h-[40vh] relative bg-primary">
-        <span className="text-white font-header text-xl absolute top-1/2  left-8 md:left-16 z-20">
+        <span className="text-white font-header text-xl absolute top-[40%] left-8 md:left-16 z-20">
           a festa <br /> pelo fotógrafo
         </span>
 
