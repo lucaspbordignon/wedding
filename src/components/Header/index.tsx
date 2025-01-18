@@ -28,7 +28,7 @@ const Header: FC = () => {
           }
         )}
       >
-        <Link href="/preview">gabriela e lucas</Link>
+        <Link href="/">gabriela e lucas</Link>
 
         <Menu onClick={onClick} className="cursor-pointer" />
       </header>

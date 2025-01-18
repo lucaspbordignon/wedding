@@ -36,16 +36,18 @@ const Sidebar: FC = () => {
       <nav className="flex flex-col h-full justify-between pb-20 font-sans font-normal tracking-widest text-lg">
         <Link
           className="hover:underline"
-          href="/preview#home"
+          href="/#home"
           onClick={onClose}
+          replace
         >
           INÍCIO
         </Link>
 
         <Link
           className="hover:underline"
-          href="/preview#schedule"
+          href="/#schedule"
           onClick={onClose}
+          replace
         >
           PROGRAMAÇÃO
         </Link>
