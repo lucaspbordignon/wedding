@@ -10,6 +10,7 @@ import Default from "@wedding/app/rsvp/Default";
 const Page = () => {
   const inviteeGroup = useAuthenticationState((state) => state.inviteeGroup);
 
+  const isNotResponded = !inviteeGroup || inviteeGroup.attending === null;
   const isConfirmed = inviteeGroup && inviteeGroup.attending;
   const isRejected = inviteeGroup && !inviteeGroup.attending;
 
@@ -19,7 +20,7 @@ const Page = () => {
 
       {isConfirmed && <StateGoing />}
       {isRejected && <StateNotGoing />}
-      {!isConfirmed && !isRejected && <Default />}
+      {isNotResponded && <Default />}
     </ContainerBase>
   );
 };
