@@ -106,11 +106,11 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 3 */}
-        <ParallaxLayer offset={2} speed={0}>
+        <ParallaxLayer offset={2} speed={0} className="flex items-center justify-center">
           <img
             src="/assets/cover.jpg"
             loading="eager"
-            className="object-cover w-full min-h-screen"
+            className="object-contain w-full min-h-screen"
           />
         </ParallaxLayer>
 

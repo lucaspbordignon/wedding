@@ -13,7 +13,7 @@ const Page = () => (
       >
         <div className="col-span-1 h-[40vh] relative bg-primary">
           <span className="text-white font-header text-xl absolute top-1/2 left-8 md:left-16 z-20">
-            pré-wedding
+            cerimônia religiosa
           </span>
 
           <img
