@@ -18,28 +18,23 @@ const TemplateSchedule = () => {
               A cerimônia e a festa serão realizadas no dia 29 de março de 2025,
               às 15h30, no Le Barbaron.
             </p>
-
-            <p>
-              <strong>Endereço:</strong> Av. Tom Traugott Wildi, 215, Praia
-              Brava. Florianópolis - SC, 88056-800.
-            </p>
           </section>
 
           <hr />
 
           <section className="flex flex-col gap-y-4">
             <h6>
-              <strong>Traje Esporte</strong>
+              <strong>Recomendações de traje</strong>
             </h6>
 
             <p>
               O local é a beira mar, a cerimônia vai ser realizada na areia e a
-              festa em um local fechado. Estamos contando com o sol, então fique
-              a vontade para trazer seus óculos.
+              festa em um local fechado com deck de madeira.
             </p>
 
+
             <p>
-              <strong>Mulheres:</strong> Vestido leve, recomendamos uso de salto bloco
+              <strong>Mulheres:</strong> Vestidos mais leves, longos ou midi. Recomendamos uso de salto bloco
             </p>
 
             <p>
