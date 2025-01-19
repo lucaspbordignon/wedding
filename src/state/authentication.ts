@@ -24,7 +24,7 @@ const useAuthenticationState = create<
     }),
     {
       name: "authentication",
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => sessionStorage),
     }
   )
 );
