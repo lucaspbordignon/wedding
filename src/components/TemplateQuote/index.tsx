@@ -28,7 +28,7 @@ const TemplateQuote = () => {
           </p>
 
           <p>
-            Agora estamos prontos para embarcar nesta nova aventura juntos,{" "}
+            Agora estamos prontos para embarcar nesta nova aventura,{" "}
             <strong>o nosso para sempre</strong>.
           </p>
 
