@@ -1,3 +1,6 @@
+/* Revalidate pages every 5 minutes */
+export const revalidate = 300;
+
 import ContainerBase from "@wedding/components/ContainerBase";
 import Header from "@wedding/components/Header";
 
