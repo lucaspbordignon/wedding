@@ -47,7 +47,7 @@ const Page = async ({ params: { id } }: PageParams) => {
             <hr className="border-0 border-b border-gray-100 my-3" />
 
             <p className="text-base font-sans text-primary font-light mt-6">
-              Para realizar o pagamento via PIX, utilize o QR code abaixo:
+              Para realizar o pagamento via Pix, utilize o QR code abaixo:
             </p>
 
             <section className="w-full flex items-center justify-center my-4">

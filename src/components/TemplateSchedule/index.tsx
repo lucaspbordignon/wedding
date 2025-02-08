@@ -44,13 +44,13 @@ const TemplateSchedule = () => {
         </section>
 
         <section className="w-full flex flex-col gap-y-4">
-          <Button href="/rsvp">Confirmar presença</Button>
+          <Button href="/rsvp" className="text-primary">Confirmar presença</Button>
 
           <a
             href="https://maps.app.goo.gl/dq7WtmBwQhDTVJKH7"
             className="w-full"
           >
-            <Button>Ver local no mapa</Button>
+            <Button className="text-primary">Ver local no mapa</Button>
           </a>
         </section>
       </section>

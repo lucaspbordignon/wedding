@@ -36,7 +36,7 @@ const Input = ({ value }: InputProps) => {
     }
 
     toast({
-      title: "Código PIX copiado!",
+      title: "Código Pix copiado!",
       description:
         "Para finalizar, acesse o app de seu banco e cole o código para realizar o pagamento.",
       duration: 3000,
