@@ -60,7 +60,7 @@ const Page = async ({ params: { id } }: PageParams) => {
             </section>
 
             <p className="text-lg font-sans text-primary font-light mt-6 mb-4">
-              Ou, se preferir, copie e cole o código abaixo:
+              Ou, se preferir, copie e cole o código a seguir:
             </p>
 
             <Input value={product.payment_code ?? ""} />

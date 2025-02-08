@@ -39,6 +39,22 @@ const Page = async () => {
             </span>
           </Link>
         ))}
+
+        <Link
+          className="col-span-1 relative bg-primary cursor-pointer hover:opacity-70 aspect-square"
+          href="/gifts/pix"
+          key="pix"
+        >
+          <div
+            className="size-full bg-cover opacity-20"
+            style={{
+              backgroundImage: "url('https://elsoezhobpdlrxpdggfg.supabase.co/storage/v1/object/public/wedding/mar.jpeg')",
+            }}
+          />
+          <span className="text-white font-header text-xl absolute top-[45%] left-6 flex flex-col gap-y-2">
+            Pix de qualquer valor
+          </span>
+        </Link>
       </section>
     </ContainerBase>
   );
