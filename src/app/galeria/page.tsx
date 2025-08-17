@@ -54,7 +54,7 @@ const Page = () => (
           </span>
 
           <img
-            src="/assets/analogicas.jpg"
+            src="/assets/analogicas-two.jpg"
             loading="eager"
             className="object-cover size-full opacity-40"
           />
